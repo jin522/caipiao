@@ -1,4 +1,5 @@
 import requests
+import time
 import json
 import utils.fake_header as fake_header
 import utils.read_config as rc
@@ -67,7 +68,7 @@ def main():
             wxpusher.send_msg(code, info)
             return
         # 任务sleep 10分钟后再次执行
-        # time.sleep(60 * 10)
+        time.sleep(60 * 10)
         counter += 1
 
     LOG.info(f'双色球最新数据爬取次数为：{counter}')
